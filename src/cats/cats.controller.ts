@@ -16,12 +16,10 @@ export class CatsController {
   constructor(private readonly catService: CatService) { }
 
   @Post()
-  @HttpCode(200)
   @Redirect('http://localhost:3000/cats', 302)
-  createCat(@Body() catDto: CreateCatDto): CreateCatDto {
+  createCat(@Body() catDto: CreateCatDto) {
     console.log('createCat');
     this.catService.create(catDto);
-    return catDto;
   }
 
   @Get()
