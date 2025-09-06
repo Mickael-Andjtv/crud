@@ -7,4 +7,4 @@ import { CatsController } from "./cats/cats.controller";
   controllers: [CatsController]
 })
 
-export class CatModule { }
+export class AppModule { }
