@@ -10,10 +10,10 @@ import {
 import { CreateCatDto } from './create-cat.dto';
 
 @Controller('cats')
-export class Cat {
+export class CatsController {
   @Post()
   @HttpCode(200)
-  @Redirect('http://localhost:3000', 302)
+  @Redirect('http://localhost:3000/cats', 302)
   createCat(@Body() catDto: CreateCatDto): CreateCatDto {
     console.log('createCat');
     return catDto;
