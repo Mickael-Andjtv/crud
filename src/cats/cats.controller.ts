@@ -7,7 +7,7 @@ import {
   Post,
   Redirect,
 } from '@nestjs/common';
-import { CreateCatDto } from './create-cat.dto';
+import { CreateCatDto } from './dto/create-cat.dto';
 import { CatService } from './cats.service';
 
 @Controller('cats')
